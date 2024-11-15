@@ -1,5 +1,5 @@
 program BancoSimples;
-uses crt;
+uses crt, SysUtils;
 
 type
     TConta = record
@@ -28,6 +28,18 @@ begin
     writeln('Conta criada com ID: ', numContas, ' e titular: ', contas[numContas].nome);
 end;
 
+//Funcao de Deposito
+procedure Depositar(var conta: TConta; valor: real);
+begin
+    conta.saldo := conta.saldo + valor;
+    conta.transacoes := conta.transacoes + 1;
+    conta.historico[conta.transacoes] := 'Depósito: ' + FloatToStr(valor);
+    writeln('Depósito realizado com sucesso!');
+end;
+
 begin
     CriarConta();
+
+    // Testando o deposito
+    Depositar(contas[1], 100.0);  // Exemplo de deposito de 100 reais
 end.
