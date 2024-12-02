@@ -37,9 +37,29 @@ begin
     writeln('Depósito realizado com sucesso!');
 end;
 
+// Função de Saque
+
+procedure Sacar(var conta: TConta; valor: real);
+begin
+    if valor <= conta.saldo then
+    begin
+        conta.saldo := conta.saldo - valor;
+        conta.transacoes := conta.transacoes + 1;
+        conta.historico[conta.transacoes] := 'Saque: ' + FloatToStr(valor);
+        writeln('Saque realizado com sucesso!');
+    end
+    else
+        writeln('Saldo insuficiente.');
+end;
+
+
 begin
     CriarConta();
 
-    // Testando o deposito
+    //CriarConta();
     Depositar(contas[1], 100.0);  // Exemplo de deposito de 100 reais
+    Sacar(contas[1], 50.0); // Exemplo de saque de 50 reais
+
+    // Testando o deposito
+    //Depositar(contas[1], 100.0);  // Exemplo de deposito de 100 reais
 end.
