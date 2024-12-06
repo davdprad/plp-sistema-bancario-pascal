@@ -1,6 +1,7 @@
 program BancoSimples;
 uses crt, SysUtils;
 
+// Estrutura de uma conta
 type
     TConta = record
         id: integer;
@@ -10,11 +11,12 @@ type
         transacoes: integer;
     end;
 
+// Array para as contas
 var
     contas: array[1..100] of TConta;
     numContas: integer = 0;
 
-
+// Função criar conta
 procedure CriarConta();
 begin
     numContas := numContas + 1;
@@ -28,7 +30,7 @@ begin
     writeln('Conta criada com ID: ', numContas, ' e titular: ', contas[numContas].nome);
 end;
 
-//Funcao de Deposito
+// Função de depósito
 procedure Depositar(var conta: TConta; valor: real);
 begin
     conta.saldo := conta.saldo + valor;
@@ -37,8 +39,7 @@ begin
     writeln('Depósito realizado com sucesso!');
 end;
 
-// Função de Saque
-
+// Função de saque
 procedure Sacar(var conta: TConta; valor: real);
 begin
     if valor <= conta.saldo then
@@ -52,14 +53,55 @@ begin
         writeln('Saldo insuficiente.');
 end;
 
+procedure Menu();
+var
+    opcao, contaId, contaDestinoId: integer;
+    valor: real;
+begin
+    repeat
+        writeln('--- Sistema Bancario ---');
+        writeln('1. Criar Conta');
+        writeln('2. Depositar');
+        writeln('3. Sacar');
+        writeln('4. Transferir');
+        writeln('5. Exibir Historico');
+        writeln('6. Sair');
+        readln(opcao);
+
+        case opcao of
+            1: CriarConta();
+            2: begin
+                writeln('Digite o ID da conta para depósito: ');
+                readln(contaId);
+                writeln('Digite o valor: ');
+                readln(valor);
+                Depositar(contas[contaId], valor);
+            end;
+            3: begin
+                writeln('Digite o ID da conta para saque: ');
+                readln(contaId);
+                writeln('Digite o valor: ');
+                readln(valor);
+                Sacar(contas[contaId], valor);
+            end;
+            // 4: begin
+            //     writeln('Digite o ID da conta de origem: ');
+            //     readln(contaId);
+            //     writeln('Digite o ID da conta de destino: ');
+            //     readln(contaDestinoId);
+            //     writeln('Digite o valor: ');
+            //     readln(valor);
+            //     Transferir(contas[contaId], contas[contaDestinoId], valor);
+            // end;
+            // 5: begin
+            //     writeln('Digite o ID da conta para exibir o histórico: ');
+            //     readln(contaId);
+            //     ExibirHistorico(contas[contaId]);
+            // end;
+        end;
+    until opcao = 6;
+end;
 
 begin
-    CriarConta();
-
-    //CriarConta();
-    Depositar(contas[1], 100.0);  // Exemplo de deposito de 100 reais
-    Sacar(contas[1], 50.0); // Exemplo de saque de 50 reais
-
-    // Testando o deposito
-    //Depositar(contas[1], 100.0);  // Exemplo de deposito de 100 reais
+    Menu();
 end.
