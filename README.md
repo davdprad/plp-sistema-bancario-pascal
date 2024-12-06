@@ -3,7 +3,7 @@ Sistema bancário em Pascal (Paradigmas de Linguagem de Programação).
 
 ## Integrantes da equipe
 
-| ![Avatar de Nome](https://avatars.githubusercontent.com/u/151275054?v=4) | ![Avatar de Nome](https://avatars.githubusercontent.com/u/157995967?v=4) |  ![Avatar de Nome](https://avatars.githubusercontent.com/u/141539000?v=4) |  ![Avatar de Nome](https://avatars.githubusercontent.com/u/127448581?v=4) |
+| ![Avatar de Nome](https://github.com/BrunaLucad2004.png?size=100) | ![Avatar de Nome](https://github.com/davdprad?size=100) |  ![Avatar de Nome](https://github.com/lucasEduu?size=100) |  ![Avatar de Nome](https://github.com/kellmb?size=100) |
 | **[Bruna Lucas](https://github.com/BrunaLucad2004)** | **[David Prado](https://github.com/davdprad)** | **[Lucas Moura](https://github.com/lucasEduu)** | **[Raquel Batista](https://github.com/kellmb)** |
 
 ## Para compilar e executar o arquivo, execute no terminal:
