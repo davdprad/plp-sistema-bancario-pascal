@@ -3,9 +3,9 @@ Sistema bancário em Pascal (Paradigmas de Linguagem de Programação).
 
 ## Equipe
 
-| ![Avatar de Bruna](https://github.com/BrunaLucad2004.png?size=100) | ![Avatar de David](https://github.com/davdprad.png?size=100) | ![Avatar de Lucas](https://github.com/lucasEduu.png?size=100) | ![Avatar de Raquel](https://github.com/kellmb.png?size=100) |
-|:------------------------------------------------------------------:|:----------------------------------------------------------:|:-----------------------------------------------------------:|:----------------------------------------------------------:|
-| **[Bruna Santos](https://github.com/BrunaLucad2004)**              | **[David Prado](https://github.com/davdprad)**             | **[Lucas Moura](https://github.com/lucasEduu)**             | **[Raquel Batista](https://github.com/kellmb)**            |
+| ![Avatar de Bruna](https://github.com/BrunaLucad2004.png?size=100) | ![Avatar de David](https://github.com/davdprad.png?size=100) | ![Avatar de Lucas](https://github.com/lucasEduu.png?size=100) | ![Avatar de Pedro](https://github.com/PedroHenriqueBM.png?size=100) | ![Avatar de Raquel](https://github.com/kellmb.png?size=100) |
+|:------------------------------------------------------------------:|:------------------------------------------------------------------:|:------------------------------------------------------------------:|:------------------------------------------------------------------:|:------------------------------------------------------------------:|
+| **[Bruna Santos](https://github.com/BrunaLucad2004)**              | **[David Prado](https://github.com/davdprad)**               | **[Lucas Moura](https://github.com/lucasEduu)**               | **[Pedro Barros](https://github.com/PedroHenriqueBM)**          | **[Raquel Batista](https://github.com/kellmb)**             |
 
 ## Para compilar e executar o arquivo, execute no terminal:
 Compilar: 
