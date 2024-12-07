@@ -35,7 +35,7 @@ procedure Depositar(var conta: TConta; valor: real);
 begin
     conta.saldo := conta.saldo + valor;
     conta.transacoes := conta.transacoes + 1;
-    conta.historico[conta.transacoes] := 'Depósito: ' + FloatToStr(valor);
+    conta.historico[conta.transacoes] := 'Deposito: ' + FloatToStr(valor);
     writeln('Deposito realizado com sucesso!');
 end;
 
@@ -53,6 +53,32 @@ begin
         writeln('Saldo insuficiente.');
 end;
 
+// Função de transferencia
+procedure Transferir(var contaOrigem, contaDestino: TConta; valor: real);
+begin
+    if valor <= contaOrigem.saldo then
+    begin
+        contaOrigem.saldo := contaOrigem.saldo - valor;
+        contaDestino.saldo := contaDestino.saldo + valor;
+
+        contaOrigem.transacoes := contaOrigem.transacoes + 1;
+        contaOrigem.historico[contaOrigem.transacoes] := 'Transferencia enviada: ' + FloatToStr(valor);
+
+        contaDestino.transacoes := contaDestino.transacoes + 1;
+        contaDestino.historico[contaDestino.transacoes] := 'Transferencia recebida: ' + FloatToStr(valor);
+
+        writeln('Transferencia realizada com sucesso!');
+    end
+    else
+        writeln('Saldo insuficiente para transferencia.');
+end;
+
+// Exibir saldo
+procedure ExibirSaldo(conta: Tconta);
+begin
+    writeln('O saldo da conta de ', conta.nome, ' eh de: ', FloatToStr(conta.saldo));
+end;
+
 // Exibir histórico
 procedure ExibirHistorico(conta: TConta);
 var
@@ -61,7 +87,7 @@ begin
     writeln('Historico de Transacoes da Conta ', conta.id, ':');
     for i := 1 to conta.transacoes do
     begin
-        writeln(conta.historico[i]);
+        writeln('- ', conta.historico[i]);
     end;
 end;
 
@@ -76,8 +102,9 @@ begin
         writeln('2. Depositar');
         writeln('3. Sacar');
         writeln('4. Transferir');
-        writeln('5. Exibir Historico');
-        writeln('6. Sair');
+        writeln('5. Ver saldo');
+        writeln('6. Exibir Historico');
+        writeln('7. Sair');
         readln(opcao);
 
         case opcao of
@@ -96,22 +123,27 @@ begin
                 readln(valor);
                 Sacar(contas[contaId], valor);
             end;
-            // 4: begin
-            //     writeln('Digite o ID da conta de origem: ');
-            //     readln(contaId);
-            //     writeln('Digite o ID da conta de destino: ');
-            //     readln(contaDestinoId);
-            //     writeln('Digite o valor: ');
-            //     readln(valor);
-            //     Transferir(contas[contaId], contas[contaDestinoId], valor);
-            // end;
+            4: begin
+                writeln('Digite o ID da conta de origem: ');
+                readln(contaId);
+                writeln('Digite o ID da conta de destino: ');
+                readln(contaDestinoId);
+                writeln('Digite o valor: ');
+                readln(valor);
+                Transferir(contas[contaId], contas[contaDestinoId], valor);
+            end;
             5: begin
+                writeln('Digite o ID da conta para ver o saldo: ');
+                readln(contaId);
+                writeln('O saldo da conta de ', contas[contaId].nome, ' eh de: ', FloatToStr(contas[contaId].saldo));
+            end;
+            6: begin
                 writeln('Digite o ID da conta para exibir o historico: ');
                 readln(contaId);
                 ExibirHistorico(contas[contaId]);
             end;
         end;
-    until opcao = 6;
+    until opcao = 7;
 end;
 
 begin
