@@ -53,6 +53,18 @@ begin
         writeln('Saldo insuficiente.');
 end;
 
+// Exibir histórico
+procedure ExibirHistorico(conta: TConta);
+var
+    i: integer;
+begin
+    writeln('Histórico de Transações da Conta ', conta.id, ':');
+    for i := 1 to conta.transacoes do
+    begin
+        writeln(conta.historico[i]);
+    end;
+end;
+
 procedure Menu();
 var
     opcao, contaId, contaDestinoId: integer;
@@ -93,11 +105,11 @@ begin
             //     readln(valor);
             //     Transferir(contas[contaId], contas[contaDestinoId], valor);
             // end;
-            // 5: begin
-            //     writeln('Digite o ID da conta para exibir o histórico: ');
-            //     readln(contaId);
-            //     ExibirHistorico(contas[contaId]);
-            // end;
+            5: begin
+                writeln('Digite o ID da conta para exibir o histórico: ');
+                readln(contaId);
+                ExibirHistorico(contas[contaId]);
+            end;
         end;
     until opcao = 6;
 end;
@@ -105,4 +117,3 @@ end;
 begin
     Menu();
 end.
-
