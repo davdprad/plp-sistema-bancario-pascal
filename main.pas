@@ -36,7 +36,7 @@ begin
     conta.saldo := conta.saldo + valor;
     conta.transacoes := conta.transacoes + 1;
     conta.historico[conta.transacoes] := 'Depósito: ' + FloatToStr(valor);
-    writeln('Depósito realizado com sucesso!');
+    writeln('Deposito realizado com sucesso!');
 end;
 
 // Função de saque
@@ -51,6 +51,18 @@ begin
     end
     else
         writeln('Saldo insuficiente.');
+end;
+
+// Exibir histórico
+procedure ExibirHistorico(conta: TConta);
+var
+    i: integer;
+begin
+    writeln('Historico de Transacoes da Conta ', conta.id, ':');
+    for i := 1 to conta.transacoes do
+    begin
+        writeln(conta.historico[i]);
+    end;
 end;
 
 procedure Menu();
@@ -71,7 +83,7 @@ begin
         case opcao of
             1: CriarConta();
             2: begin
-                writeln('Digite o ID da conta para depósito: ');
+                writeln('Digite o ID da conta para deposito: ');
                 readln(contaId);
                 writeln('Digite o valor: ');
                 readln(valor);
@@ -93,11 +105,11 @@ begin
             //     readln(valor);
             //     Transferir(contas[contaId], contas[contaDestinoId], valor);
             // end;
-            // 5: begin
-            //     writeln('Digite o ID da conta para exibir o histórico: ');
-            //     readln(contaId);
-            //     ExibirHistorico(contas[contaId]);
-            // end;
+            5: begin
+                writeln('Digite o ID da conta para exibir o historico: ');
+                readln(contaId);
+                ExibirHistorico(contas[contaId]);
+            end;
         end;
     until opcao = 6;
 end;
