@@ -2,9 +2,6 @@
 Sistema bancário em Pascal (Paradigmas de Linguagem de Programação).
 
 ## Equipe
-
-## Equipe
-
 <table>
   <tr>
     <td align="center">
