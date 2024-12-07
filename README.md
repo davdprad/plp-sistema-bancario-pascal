@@ -3,9 +3,37 @@ Sistema bancário em Pascal (Paradigmas de Linguagem de Programação).
 
 ## Equipe
 
-| ![Avatar de Bruna](https://github.com/BrunaLucad2004.png?size=100) | ![Avatar de David](https://github.com/davdprad.png?size=100) | ![Avatar de Lucas](https://github.com/lucasEduu.png?size=100) | ![Avatar de Pedro](https://github.com/PedroHenriqueBM.png?size=100) | ![Avatar de Raquel](https://github.com/kellmb.png?size=100) |
-|:------------------------------------------------------------------:|:------------------------------------------------------------------:|:------------------------------------------------------------------:|:------------------------------------------------------------------:|:------------------------------------------------------------------:|
-| **[Bruna Santos](https://github.com/BrunaLucad2004)**              | **[David Prado](https://github.com/davdprad)**               | **[Lucas Moura](https://github.com/lucasEduu)**               | **[Pedro Barros](https://github.com/PedroHenriqueBM)**          | **[Raquel Batista](https://github.com/kellmb)**             |
+## Equipe
+
+<table>
+  <tr>
+    <td align="center">
+      <img src="https://github.com/BrunaLucad2004.png" width="100" height="100" alt="Avatar de Bruna">
+      <br>
+      <strong><a href="https://github.com/BrunaLucad2004">Bruna Santos</a></strong>
+    </td>
+    <td align="center">
+      <img src="https://github.com/davdprad.png" width="100" height="100" alt="Avatar de David">
+      <br>
+      <strong><a href="https://github.com/davdprad">David Prado</a></strong>
+    </td>
+    <td align="center">
+      <img src="https://github.com/lucasEduu.png" width="100" height="100" alt="Avatar de Lucas">
+      <br>
+      <strong><a href="https://github.com/lucasEduu">Lucas Moura</a></strong>
+    </td>
+    <td align="center">
+      <img src="https://github.com/PedroHenriqueBM.png" width="100" height="100" alt="Avatar de Pedro">
+      <br>
+      <strong><a href="https://github.com/PedroHenriqueBM">Pedro Barros</a></strong>
+    </td>
+    <td align="center">
+      <img src="https://github.com/kellmb.png" width="100" height="100" alt="Avatar de Raquel">
+      <br>
+      <strong><a href="https://github.com/kellmb">Raquel Batista</a></strong>
+    </td>
+  </tr>
+</table>
 
 ## Para compilar e executar o arquivo, execute no terminal:
 Compilar: 
