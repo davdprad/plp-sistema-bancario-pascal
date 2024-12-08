@@ -32,6 +32,9 @@ Sistema bancário em Pascal (Paradigmas de Linguagem de Programação).
   </tr>
 </table>
 
+## Link para a apresentação
+*[Apresentação Pascal](https://www.canva.com/design/DAGYn_PUM1Y/kthweuyJpyS7HSW6hLTw0w/edit?utm_content=DAGYn_PUM1Y&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton)*
+
 ## Para compilar e executar o arquivo, execute no terminal:
 Compilar: 
     
