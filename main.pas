@@ -1,5 +1,5 @@
 program BancoSimples;
-uses crt, SysUtils;
+uses SysUtils;
 
 // Estrutura de uma conta
 type
